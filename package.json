@@ -18,7 +18,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "if-env": "^1.0.4"
+    "apollo-server-express": "^2.21.2",
+    "if-env": "^1.0.4",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "concurrently": "^5.2.0"
