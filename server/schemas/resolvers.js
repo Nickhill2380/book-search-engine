@@ -40,13 +40,13 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
           },
-          saveBook: async (parent, { book }, context) => {
-            // console.log(args);
+          saveBook: async (parent, { input }, context) => {
+            
             if (context.user) {
                     
-             const userData = await User.findOneAndUpdate(
+             const userData = await User.findByIdAndUpdate(
                 { _id: context.user._id },
-                { $addToSet: { savedBooks: book} },
+                { $addToSet: { savedBooks: input} },
                 { new: true }
               );
               return userData;
@@ -57,7 +57,7 @@ const resolvers = {
           removeBook: async (parent, {bookId}, context) => {
               if (context.user) {
 
-               const userData = await User.findOneAndUpdate(
+               const userData = await User.findByIdAndUpdate(
                     { _id: context.user._id},
                     { $pull: { savedBooks: { bookId: bookId} }},
                     { new:true }
