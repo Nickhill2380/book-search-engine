@@ -29,6 +29,8 @@ mutation saveBook($input:BookInput){
   saveBook(input:$input) {
     _id
     username
+    email
+    bookCount
     savedBooks {
       bookId
       authors
