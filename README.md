@@ -21,7 +21,8 @@ You need to install apollo-server-express, graphql, express, path, jsonwebtoken,
 
 ## Usage
 
-Please see attached screenshot of
+Please see attached screenshot of https://book-search-engine2380.herokuapp.com/
+![image](https://user-images.githubusercontent.com/71850826/112767013-6bdda200-8fe2-11eb-8104-7c9649490eab.png)
 
 ## Questions
 
